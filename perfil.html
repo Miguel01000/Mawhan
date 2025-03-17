@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zonatmo - Perfil de Usuario</title>
+  <link rel="stylesheet" href="Public/Css/style.css" />
+  <link rel="stylesheet" href="Public/Css/perfil.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="search-login">
+        <input type="text" placeholder="Buscar manga..." />
+        <button class="btn-search">Buscar</button>
+        <a href="login.html" class="btn login">Iniciar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor de perfil -->
+  <main class="container perfil-container">
+    <h2>Perfil de Usuario</h2>
+    <div class="perfil-info">
+      <div class="perfil-imagen">
+        <img id="perfil-imagen" src="Public/Images/default-profile.png" alt="Imagen de Perfil">
+        <button id="btn-cambiar-imagen">Cambiar Imagen</button>
+        <input type="file" id="input-cambiar-imagen" accept="image/*" style="display:none;" />
+      </div>
+      <div class="perfil-datos">
+        <div class="nombre-editar">
+          <h3 id="perfil-nombre">Nombre de Usuario</h3>
+          <button id="btn-editar-nombre" title="Editar Nombre">
+            <img src="Public/Images/edit-icon.svg" alt="Editar" />
+          </button>
+        </div>
+        <p id="perfil-correo">usuario@ejemplo.com</p>
+      </div>
+    </div>
+    <div class="perfil-acciones">
+      <button id="btn-cerrar-sesion">Cerrar Sesión</button>
+      <button id="btn-subir-manga">Subir Manga</button>
+      <button id="btn-admin" style="display:none;">Acceso Admin</button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="Js/perfil.js"></script>
+  <script type="module" src="Js/Supabase.js"></script>
+</body>
+</html>

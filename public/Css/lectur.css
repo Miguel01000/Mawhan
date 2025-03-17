@@ -1,0 +1,78 @@
+/* Archivo: lectura.css */
+
+/* Contenedor principal de lectura */
+.lectura-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Imagen del capítulo */
+.lectura-container .capitulo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Controles de navegación */
+.lectura-container .controles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.lectura-container .controles button {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.lectura-container .controles button:hover {
+    background-color: #d93636;
+}
+
+/* Botón de reporte */
+.lectura-container .reporte {
+    margin-top: 20px;
+}
+
+.lectura-container .reporte button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.lectura-container .reporte button:hover {
+    background-color: #e6b800;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .lectura-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .lectura-container .controles {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lectura-container .controles button {
+        width: 100%;
+    }
+}

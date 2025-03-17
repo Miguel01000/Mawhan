@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lectura de Manga - Zonatmo</title>
+  <link rel="stylesheet" href="Public/Css/style.css" />
+  <link rel="stylesheet" href="Public/Css/lectur.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="Index.html">Inicio</a></li>
+        
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="Capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenedor de lectura -->
+  <main class="lectura-container">
+    <!-- Encabezado con información del capítulo -->
+    <div class="capitulo-header">
+      <h2 id="info-capitulo"></h2>
+    </div>
+
+    <div class="capitulo">
+      <!-- Contenedor para mostrar el PDF -->
+      <iframe id="pagina-actual" class="pdf-viewer" src="" width="100%" height="600px"></iframe>
+    </div>
+
+    <!-- Controles de navegación -->
+    <div class="controles">
+      <button id="btn-previo">Anterior</button>
+      <button id="btn-siguiente">Siguiente</button>
+    </div>
+
+    <!-- Reporte de errores -->
+    <div class="reporte">
+      <button id="btn-reporte">Reportar capítulo roto</button>
+    </div>
+  </main>
+
+  <script type="module" src="Js/Supabase.js"></script>
+  <script type="module" src="Js/lectura.js"></script> <!-- Script específico para la lectura -->
+</body>
+</html>
+

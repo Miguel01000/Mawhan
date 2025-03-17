@@ -1,0 +1,261 @@
+/* Reset y configuraciones generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Contenedor central */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin: 0 10px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #e74c3c;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-login input[type="text"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.btn-search {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.btn-search:hover {
+  background-color: #c0392b;
+}
+
+.search-login .btn {
+  padding: 5px 10px;
+  border: 1px solid #e74c3c;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #e74c3c;
+  margin: 5px 0 0 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-login .btn:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* BANNER CAROUSEL (los estilos básicos del slider ya se incluyen en el HTML inline o en otro bloque) */
+
+/* SECCIÓN DE MANGAS */
+.mangas {
+  padding: 20px 0;
+}
+
+.mangas h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.manga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.manga-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.manga-card:hover {
+  transform: translateY(-5px);
+}
+
+.manga-card img {
+  width: 100%;
+  display: block;
+}
+
+.manga-card h3 {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.manga-card p {
+  padding: 0 10px 10px;
+  color: #777;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e74c3c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .search-login {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .search-login input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+    /* Estilos para el slider */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+    .slide {
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      display: none;
+      position: relative;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide-content {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 3px;
+    }
+    .slide-content h2 {
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .slide-content p {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .slide-content .btn {
+      background-color: #e74c3c;
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
+    .slide-content .btn:hover {
+      background-color: #c0392b;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-nav span {
+      font-size: 2em;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .carousel-nav span:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  

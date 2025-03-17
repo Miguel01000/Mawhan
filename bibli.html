@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca - Zonatmo</title>
+  <!-- Enlazamos el CSS específico y el global -->
+  <link rel="stylesheet" href="Public/Css/bibli.css">
+  <link rel="stylesheet" href="Public/Css/style.css">
+</head>
+<body class="biblioteca-page">
+  <!-- HEADER con menú -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="Index.html">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="Capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+      
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de Filtros y Buscador -->
+  <section class="library-filters">
+    <div class="container">
+      <h2>Explora la Biblioteca</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar manga...">
+        <button id="searchButton" class="btn-search">Buscar</button>
+      </div>
+      <div class="filter-options">
+        <!-- Filtro Tipo -->
+        <div class="filter-group">
+          <label>Tipo:</label>
+          <div class="checkbox-group" id="tipoGroup">
+            <label><input type="checkbox" name="tipo" value="manga"> Manga</label>
+            <label><input type="checkbox" name="tipo" value="manhwa"> Manhwa</label>
+            <label><input type="checkbox" name="tipo" value="manhua"> Manhua</label>
+          </div>
+        </div>
+        <!-- Filtro Demografía -->
+        <div class="filter-group">
+          <label>Demografía:</label>
+          <div class="checkbox-group" id="demografiaGroup">
+            <label><input type="checkbox" name="demografia" value="shounen"> Shounen</label>
+            <label><input type="checkbox" name="demografia" value="shoujo"> Shoujo</label>
+            <label><input type="checkbox" name="demografia" value="seinen"> Seinen</label>
+            <label><input type="checkbox" name="demografia" value="josei"> Josei</label>
+          </div>
+        </div>
+        <!-- Filtro Géneros -->
+        <div class="filter-group">
+          <label>Géneros:</label>
+          <div class="checkbox-group" id="generosGroup">
+            <label><input type="checkbox" name="generos" value="accion"> Acción</label>
+            <label><input type="checkbox" name="generos" value="aventura"> Aventura</label>
+            <label><input type="checkbox" name="generos" value="fantasia"> Fantasía</label>
+            <label><input type="checkbox" name="generos" value="drama"> Drama</label>
+            <label><input type="checkbox" name="generos" value="comedia"> Comedia</label>
+            <label><input type="checkbox" name="generos" value="romance"> Romance</label>
+            <label><input type="checkbox" name="generos" value="terror"> Terror</label>
+            <!-- Nuevos géneros -->
+            <label><input type="checkbox" name="generos" value="misterio"> Misterio</label>
+            <label><input type="checkbox" name="generos" value="ciencia ficcion"> Ciencia Ficción</label>
+            <label><input type="checkbox" name="generos" value="historico"> Histórico</label>
+            <label><input type="checkbox" name="generos" value="deportes"> Deportes</label>
+            <label><input type="checkbox" name="generos" value="policial"> Policial</label>
+          </div>
+        </div>
+        <!-- Filtro Excluir Géneros -->
+        <div class="filter-group">
+          <label>Excluir Géneros:</label>
+          <div class="checkbox-group" id="excluirGenerosGroup">
+            <label><input type="checkbox" name="excluirGeneros" value="accion"> Acción</label>
+            <label><input type="checkbox" name="excluirGeneros" value="aventura"> Aventura</label>
+            <label><input type="checkbox" name="excluirGeneros" value="fantasia"> Fantasía</label>
+            <label><input type="checkbox" name="excluirGeneros" value="drama"> Drama</label>
+            <label><input type="checkbox" name="excluirGeneros" value="comedia"> Comedia</label>
+            <label><input type="checkbox" name="excluirGeneros" value="romance"> Romance</label>
+            <label><input type="checkbox" name="excluirGeneros" value="terror"> Terror</label>
+            <!-- Nuevos géneros para excluir -->
+            <label><input type="checkbox" name="excluirGeneros" value="misterio"> Misterio</label>
+            <label><input type="checkbox" name="excluirGeneros" value="ciencia ficcion"> Ciencia Ficción</label>
+            <label><input type="checkbox" name="excluirGeneros" value="historico"> Histórico</label>
+            <label><input type="checkbox" name="excluirGeneros" value="deportes"> Deportes</label>
+            <label><input type="checkbox" name="excluirGeneros" value="policial"> Policial</label>
+          </div>
+        </div>
+      </div>
+      <button id="applyFilters">Aplicar Filtro</button>
+    </div>
+  </section>
+
+  <!-- Sección de Resultados -->
+  <section class="library-results">
+    <div class="container">
+      <h2>Resultados</h2>
+      <div class="results-grid">
+        <!-- Aquí se cargarán dinámicamente las tarjetas de manga -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Zonatmo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Enlazamos el JavaScript -->
+  <script type="module" src="Js/Supabase.js"></script>
+  <script type="module" src="Js/bibli.js"></script>
+</body>
+</html>

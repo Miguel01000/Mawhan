@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Manga</title>
+  <link rel="stylesheet" href="public/Css/style.css">
+  <link rel="stylesheet" href="public/Css/manga.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="Capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="search-login">
+        <input type="text" placeholder="Buscar manga..." />
+        <button class="btn-search">Buscar</button>
+        <a href="login.html" class="btn login">Iniciar Sesión</a>
+        <a href="register.html" class="btn register">Registrarse</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor de detalles del Manga -->
+  <div class="manga-details-container">
+    <div class="manga-info">
+      <img id="manga-portada" alt="Portada manga">
+      <div class="manga-details">
+        <h2 id="manga-titulo"></h2>
+        <p id="manga-sinopsis"></p>
+        <p>Autor: <span id="manga-autor"></span></p>
+        <p>Género: <span id="manga-genero"></span></p>
+        <p>Estado: <span id="manga-estado"></span></p>
+      </div>
+    </div>
+    
+    <h3>Capítulos</h3>
+    <div id="capitulos-list">
+      <!-- Ejemplo de capítulo (los capítulos se cargarán dinámicamente) -->
+      <div class="capitulo-card">
+        <p>Capítulo 1 - Título del Capítulo</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="Js/Supabase.js"></script>
+  <script type="module" src="Js/manga.js"></script>
+</body>
+</html>
+
+

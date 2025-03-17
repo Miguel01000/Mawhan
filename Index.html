@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zonatmo - Página Principal</title>
+  <link rel="stylesheet" href="Public/Css/style.css" />
+  <!-- Estilos específicos para el slider (puedes incluirlos en tu CSS general si prefieres) -->
+  
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="Capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="search-login">
+        <input type="text" placeholder="Buscar manga..." />
+        <button class="btn-search">Buscar</button>
+        <a href="login.html" class="btn login">Iniciar Sesión</a>
+        <a href="register.html" class="btn register">Registrarse</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Carousel (Slider) -->
+  <section class="banner">
+    <div class="carousel">
+      <!-- Los slides se generarán dinámicamente desde la base de datos -->
+    </div>
+  </section>
+
+  <!-- Sección de Mangas Recientes -->
+  <section class="mangas">
+    <div class="container">
+      <h2>Mangas Recientes</h2>
+      <div class="manga-grid">
+        <!-- Las tarjetas se cargarán dinámicamente vía JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p>&copy; 2025 Zonatmo. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Ayuda</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Cargar Supabase y nuestro JS -->
+  <script type="module" src="Js/Supabase.js"></script>
+  <script type="module" src="Js/index.js"></script>
+</body>
+</html>
+
+

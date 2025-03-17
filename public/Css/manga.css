@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Contenedor principal de detalles del manga */
+.manga-details-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de información del manga */
+.manga-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.manga-info img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.manga-details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.manga-details h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.manga-details p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Título y separación para la sección de capítulos */
+h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e74c3c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Lista de capítulos */
+#capitulos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Tarjeta para cada capítulo */
+.capitulo-card {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-left: 4px solid #e74c3c;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.capitulo-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Adaptabilidad para dispositivos móviles */
+@media (max-width: 768px) {
+  .manga-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .manga-details {
+    text-align: center;
+  }
+}
+

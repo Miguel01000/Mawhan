@@ -1,0 +1,145 @@
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  background-color: #1f1f1f;
+  padding: 10px 0;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+.nav ul li {
+  margin: 0 10px;
+}
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+* Filtros y Buscador */
+.biblioteca-page .library-filters {
+  background-color: #e0e0e0;
+  padding: 20px 0;
+}
+.biblioteca-page .library-filters h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+.biblioteca-page .search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.biblioteca-page #searchInput {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+.biblioteca-page .btn-search {
+  padding: 10px 20px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+}
+.biblioteca-page .filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.biblioteca-page .filter-group {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #333;
+}
+.biblioteca-page .filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.biblioteca-page .checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+/* Resultados */
+.library-results {
+  padding: 20px 0;
+}
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.manga-card {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.manga-card:hover {
+  transform: scale(1.05);
+}
+.manga-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.manga-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+.manga-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer p {
+  font-size: 14px;
+}

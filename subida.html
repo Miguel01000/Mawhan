@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subir Manga y Capítulos</title>
+  <link rel="stylesheet" href="public/Css/subida.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Subir Manga y Capítulos</h1>
+    <nav>
+      <input type="text" id="search-input" placeholder="Buscar Manga..." />
+      <button id="search-btn">Buscar</button>
+      <!-- Botón que lleva al perfil -->
+      <a href="perfil.html" class="btn">Perfil</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Sección para subir manga -->
+    <section id="manga-upload">
+      <h2>Subir Manga</h2>
+      <form id="manga-form">
+        <label for="manga-title">Título:</label>
+        <input type="text" id="manga-title" name="titulo" required />
+
+        <label for="manga-sinopsis">Sinopsis:</label>
+        <textarea id="manga-sinopsis" name="sinopsis" required></textarea>
+
+        <label for="manga-autor">Autor:</label>
+        <input type="text" id="manga-autor" name="autor" required />
+
+      
+        <label for="manga-portada">Portada:</label>
+        <input type="file" id="manga-portada" name="portada" accept="image/*" required />
+
+        <label for="manga-genero">Género (separados por comas):</label>
+        <input type="text" id="manga-genero" name="genero" required />
+
+        <label for="manga-estado">Estado:</label>
+        <select id="manga-estado" name="estado" required>
+          <option value="En curso">En curso</option>
+          <option value="Finalizado">Finalizado</option>
+        </select>
+
+        <button type="submit">Subir Manga</button>
+      </form>
+    </section>
+
+    <!-- Sección para subir capítulo -->
+    <section id="chapter-upload">
+      <h2>Subir Capítulo</h2>
+      <form id="chapter-form">
+        <label for="chapter-manga">Seleccionar Manga:</label>
+        <select id="chapter-manga" name="id_manga" required>
+          <!-- Opciones se cargarán dinámicamente -->
+        </select>
+
+        <label for="chapter-title">Título del Capítulo:</label>
+        <input type="text" id="chapter-title" name="titulo" required />
+
+        <label for="chapter-number">Número:</label>
+        <input type="number" id="chapter-number" name="numero" required />
+
+        <label for="chapter-publication">Fecha de Publicación:</label>
+        <input type="date" id="chapter-publication" name="fecha_oublicacion" required />
+
+        <label for="chapter-pdf">PDF del Capítulo:</label>
+        <input type="file" id="chapter-pdf" name="pdf_url" accept="application/pdf" required />
+
+        <button type="submit">Subir Capítulo</button>
+      </form>
+    </section>
+
+    <!-- Sección para mostrar resultados de búsqueda -->
+    <section id="search-results">
+      <h2>Resultados de búsqueda</h2>
+      <ul id="results-list"></ul>
+    </section>
+  </main>
+  <script src="Js/subida.js" type="module"></script>
+  <script src="Js/Supabase.js" type="module"></script>
+ 
+<script>
+  async function uploadFile(file) {
+    if (file.type !== 'application/pdf') {
+      alert('Por favor, selecciona un archivo PDF.');
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.storage
+        .from('Capitulos') // Verifica que el nombre del bucket sea correcto
+        .upload(file.name, file, {
+          contentType: 'application/pdf',
+        });
+
+      if (error) {
+        console.error('Error al subir el archivo:', error);
+        alert('Error al subir el archivo.');
+      } else {
+        console.log('Archivo subido con éxito:', data);
+        alert('Archivo subido con éxito.');
+      }
+    } catch (error) {
+      console.error('Error inesperado:', error);
+      alert('Error inesperado.');
+    }
+  }
+
+  document.getElementById('fileInput').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      uploadFile(file);
+    }
+  });
+</script>
+
+<script>
+  async function uploadImage(file) {
+    // Verifica que el archivo sea una imagen
+    if (!file.type.startsWith('image/')) {
+      alert('Por favor, selecciona una imagen válida (JPG, PNG, WEBP).');
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.storage
+        .from('Portadas') // Nombre del bucket donde se guardarán las portadas
+        .upload(`portadas/${Date.now()}_${file.name}`, file, {
+          contentType: file.type,
+        });
+
+      if (error) {
+        console.error('Error al subir la imagen:', error);
+        alert('Error al subir la imagen.');
+      } else {
+        console.log('Imagen subida con éxito:', data);
+        alert('Imagen subida con éxito.');
+      }
+    } catch (error) {
+      console.error('Error inesperado:', error);
+      alert('Error inesperado.');
+    }
+  }
+
+  document.getElementById('imageInput').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      uploadImage(file);
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

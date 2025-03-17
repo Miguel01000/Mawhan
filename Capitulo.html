@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zonatmo - Últimos Capítulos</title>
+  <link rel="stylesheet" href="Public/Css/style.css" />
+  <link rel="stylesheet" href="public/Css/capitulo.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#">Zonatmo</a>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="Index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="Capitulo.html">Capítulos</a></li>
+          <li><a href="bibli.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+      <div class="search-login">
+        <input type="text" placeholder="Buscar manga..." />
+        <button class="btn-search">Buscar</button>
+        <a href="login.html" class="btn login">Iniciar Sesión</a>
+        <a href="register.html" class="btn register">Registrarse</a>
+      </div>
+    </div>
+  </header>
+  <!-- Sección de Capítulos -->
+  <section class="capitulo-section">
+    <header class="capitulo-header">
+      <h1>Últimos Capítulos</h1>
+      <p>Actualmente se muestra la página <span id="pagina-actual">1</span>.</p>
+    </header>
+    <main class="capitulo-contenedor">
+      <section class="capitulo-lista" id="capitulo-lista">
+        <!-- Aquí se cargarán los capítulos dinámicamente -->
+        <!-- Ejemplo de capítulo -->
+        <a href="#" class="capitulo-item">
+          <div class="manga-info">
+            <img src="Public/Images/default-manga.png" alt="Portada manga">
+            <div class="manga-title">Manga Ejemplo</div>
+          </div>
+          <div class="capitulo-info">
+            <h3>Capítulo 1</h3>
+            <p>Título del Capítulo</p>
+          </div>
+        </a>
+      </section>
+      <div class="capitulo-paginacion">
+        <button id="prev-page" disabled>&larr;</button>
+        <button id="next-page">&rarr;</button>
+      </div>
+      <div id="loading-spinner" style="display: none;">Cargando...</div>
+    </main>
+  </section>
+  <!-- Se carga el JS como módulo para poder usar importaciones -->
+  <script type="module" src="Js/cap.js"></script>
+</body>
+</html>
+

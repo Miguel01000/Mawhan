@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zonatmo - Login</title>
+  <!-- Enlaza el CSS de tu proyecto y el CSS específico para login -->
+  <link rel="stylesheet" href="Public/Css/style.css" />
+  <link rel="stylesheet" href="Public/Css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit" id="btn-login">Iniciar Sesión</button>
+    </form>
+    <div class="login-options">
+      <button id="btn-register">Registrarse</button>
+      <button id="btn-forgot">Se olvidó contraseña</button>
+     
+    </div>
+  </div>
+
+  <!-- Importa la configuración de Firebase y el script de login -->
+  <script type="module" src="Js/Supabase.js"></script>
+  <script type="module" src="Js/login.js" defer></script> <!-- Se agregó defer -->
+</body>
+</html>
